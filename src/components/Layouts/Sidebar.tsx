@@ -94,7 +94,7 @@ const Sidebar = () => {
                         <ul className="relative font-semibold space-y-0.5 p-4 py-0">
                             {/* == General == */}
                             <li className="nav-item">
-                                <NavLink to="/esgform/general" className="group">
+                                <NavLink to="/" className="group">
                                     <div className="flex items-center">
                                         <IconMenuNotes className="group-hover:!text-primary shrink-0" />
                                         <span className="ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark">{t('General')}</span>
@@ -105,11 +105,21 @@ const Sidebar = () => {
                             <li className="nav-item">
                                 <NavLink to="/esgform/environmental" className="group">
                                     <div className="flex items-center">
-                                        <IconMenuNotes className="group-hover:!text-primary shrink-0" />
+                                        <IconMenuComponents className="group-hover:!text-primary shrink-0" />
                                         <span className="ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark">{t('Environmental')}</span>
                                     </div>
                                 </NavLink>
                             </li>
+                            {/* == Social == */}
+                            <li className="nav-item">
+                                <NavLink to="/esgform/social" className="group">
+                                    <div className="flex items-center">
+                                        <IconMenuUsers className="group-hover:!text-primary shrink-0" />
+                                        <span className="ltr:pl-3 rtl:pr-3 text-black dark:text-[#506690] dark:group-hover:text-white-dark">{t('Social')}</span>
+                                    </div>
+                                </NavLink>
+                            </li>
+                            
                         </ul>
                     </PerfectScrollbar>
                 </div>

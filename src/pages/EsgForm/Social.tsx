@@ -13,10 +13,10 @@ import IconPhone from '../../components/Icon/IconPhone';
 import IconInfoCircle from '../../components/Icon/IconInfoCircle';
 import IconSettings from '../../components/Icon/IconSettings';
 
-const Environmental = () => {
+const Social = () => {
     const dispatch = useDispatch();
     useEffect(() => {
-        dispatch(setPageTitle('Environmental'));
+        dispatch(setPageTitle('Social'));
     });
     const [tabs, setTabs] = useState<string[]>([]);
     const toggleCode = (name: string) => {
@@ -35,7 +35,7 @@ const Environmental = () => {
                 {/* Border Top */}
                 <div className="panel" id="border">
                     <div className="mb-5 flex items-center justify-between">
-                        <h5 className="text-lg font-semibold dark:text-white-light">Environmental</h5>
+                        <h5 className="text-lg font-semibold dark:text-white-light">Social</h5>
                         {/* <button type="button" className="font-semibold hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-600" onClick={() => toggleCode('code7')}>
                             <span className="flex items-center">
                                 <IconCode className="me-2" />
@@ -64,7 +64,7 @@ const Environmental = () => {
                                                 before:inline-block' flex items-center border-t-2 border-transparent bg-[#f6f7f8] p-7 py-3 hover:border-secondary hover:text-secondary dark:bg-transparent dark:hover:bg-[#191e3a]`}
                                         >
                                             {/* <IconUser className="w-5 h-5 ltr:mr-2 rtl:ml-2" /> */}
-                                            Environmental ESG practices
+                                            Social ESG practices
                                         </button>
                                     )}
                                 </Tab>
@@ -149,7 +149,7 @@ const Environmental = () => {
                                         </div>
                                     </form>
                                 </Tab.Panel>
-                                {/* Environmental ESG practices */}
+                                {/* Social ESG practices */}
                                 <Tab.Panel>
                                     <div>
                                         <div className="flex items-start pt-5">
@@ -174,4 +174,4 @@ const Environmental = () => {
         </div>
     );
 };
-export default Environmental;
+export default Social;

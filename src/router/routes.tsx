@@ -1,4 +1,5 @@
 import { lazy } from 'react';
+const Social = lazy(() => import ('../pages/EsgForm/Social'));
 const Environmental = lazy(() => import ('../pages/EsgForm/Environmental'));
 const General = lazy(() => import ('../pages/EsgForm/General'));
 // const Index = lazy(() => import('../pages/Index'));
@@ -7,7 +8,7 @@ const General = lazy(() => import ('../pages/EsgForm/General'));
 const routes = [
     // General Page
     {
-        path: '/esgform/general',
+        path: '/',
         element: <General />,
     },
       // Environmental Page
@@ -15,15 +16,11 @@ const routes = [
         path: '/esgform/environmental',
         element: <Environmental />,
     },
-    //  // Apps page
-    //  {
-    //     path: '/apps/chat',
-    //     element: <Chat />,
-    // },
-    // {
-    //     path: '/apps/scrumboard',
-    //     element: <Scrumboard />,
-    // },
+     // Social Page
+    {
+        path: '/esgform/social',
+        element: <Social />,
+    }
    
     
 ];

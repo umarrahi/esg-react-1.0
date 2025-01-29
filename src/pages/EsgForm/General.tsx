@@ -8,6 +8,7 @@ import IconBell from '../../components/Icon/IconBell';
 import IconCode from '../../components/Icon/IconCode';
 import IconHome from '../../components/Icon/IconHome';
 import IconUser from '../../components/Icon/IconUser';
+import IconThumbUp from '../../components/Icon/IconThumbUp';
 import IconPhone from '../../components/Icon/IconPhone';
 import IconInfoCircle from '../../components/Icon/IconInfoCircle';
 import IconSettings from '../../components/Icon/IconSettings';
@@ -51,7 +52,7 @@ const General = () => {
                                             className={`${selected ? '!border-secondary text-secondary !outline-none dark:!bg-[#191e3a]' : ''}
                                                     ' flex items-center border-t-2 border-transparent bg-[#f6f7f8] p-7 py-3 before:inline-block hover:border-secondary hover:text-secondary dark:bg-transparent dark:hover:bg-[#191e3a]`}
                                         >
-                                            <IconHome className="ltr:mr-2 rtl:ml-2" />
+                                            {/* <IconHome className="ltr:mr-2 rtl:ml-2" /> */}
                                             Company information
                                         </button>
                                     )}
@@ -62,70 +63,93 @@ const General = () => {
                                             className={`${selected ? '!border-secondary text-secondary !outline-none dark:bg-[#191e3a]' : ''}
                                                 before:inline-block' flex items-center border-t-2 border-transparent bg-[#f6f7f8] p-7 py-3 hover:border-secondary hover:text-secondary dark:bg-transparent dark:hover:bg-[#191e3a]`}
                                         >
-                                            <IconUser className="w-5 h-5 ltr:mr-2 rtl:ml-2" />
+                                            {/* <IconUser className="w-5 h-5 ltr:mr-2 rtl:ml-2" /> */}
                                             General ESG practices
                                         </button>
                                     )}
                                 </Tab>
                             </Tab.List>
                             <Tab.Panels>
+                                {/* Company information */}
                                 <Tab.Panel>
-                                    <div className="inline-block w-full active pt-5">
-                                        <div className="relative z-[1]">
-                                            <div
-                                                className={`${activeTab3 === 1 ? 'w-[15%]' : activeTab3 === 2 ? 'w-[48%]' : activeTab3 === 3 ? 'w-[81%]' : ''}
-                bg-primary w-[15%] h-1 absolute ltr:left-0 rtl:right-0 top-[30px] m-auto -z-[1] transition-[width]`}
-                                            ></div>
-                                            <ul className="mb-5 grid grid-cols-3">
-                                                <li className="mx-auto">
-                                                    <button
-                                                        type="button"
-                                                        className={`${activeTab3 === 1 ? '!border-primary !bg-primary text-white' : ''}
-                bg-white dark:bg-[#253b5c] border-[3px] border-[#f3f2ee] dark:border-[#1b2e4b] flex justify-center items-center w-16 h-16 rounded-full`}
-                                                        onClick={() => setActiveTab3(1)}
-                                                    >
-                                                        <svg>...</svg>
-                                                    </button>
-                                                </li>
-                                                <li className="mx-auto">
-                                                    <button
-                                                        type="button"
-                                                        className={`${activeTab3 === 2 ? '!border-primary !bg-primary text-white' : ''}
-                bg-white dark:bg-[#253b5c] border-[3px] border-[#f3f2ee] dark:border-[#1b2e4b] flex justify-center items-center w-16 h-16 rounded-full`}
-                                                        onClick={() => setActiveTab3(2)}
-                                                    >
-                                                        <svg>...</svg>
-                                                    </button>
-                                                </li>
-                                                <li className="mx-auto">
-                                                    <button
-                                                        type="button"
-                                                        className={`${activeTab3 === 3 ? '!border-primary !bg-primary text-white' : ''}
-                bg-white dark:bg-[#253b5c] border-[3px] border-[#f3f2ee] dark:border-[#1b2e4b] flex justify-center items-center w-16 h-16 rounded-full`}
-                                                        onClick={() => setActiveTab3(3)}
-                                                    >
-                                                        <svg>...</svg>
-                                                    </button>
-                                                </li>
-                                            </ul>
+                                    <form className="panel shadow-none">
+                                        <div className=" mb-5">
+                                            <h5 className="font-semibold text-lg dark:text-white-light">Company information</h5>
+                                            {/* <button type="button" className="font-semibold hover:text-gray-400 dark:text-gray-400 dark:hover:text-gray-600" onClick={() => toggleCode('code4')}>
+                                                <span className="flex items-center">
+                                                    <IconCode className="me-2" />
+                                                    Code
+                                                </span>
+                                            </button> */}
                                         </div>
-                                        <div>
-                                            <p className="mb-5">{activeTab3 === 1 && ' Try the keyboard navigation by clicking arrow left or right!'}</p>
+                                        <div className="mb-5">
+                                            <div className="inline-block w-full">
+                                                <div className="relative z-[1]">
+                                                    <div
+                                                        className={`${activeTab3 === 1 ? 'w-[15%]' : activeTab3 === 2 ? 'w-[48%]' : activeTab3 === 3 ? 'w-[81%]' : ''}
+                                                        bg-primary w-[15%] h-1 absolute ltr:left-0 rtl:right-0 top-[30px] m-auto -z-[1] transition-[width]`}
+                                                    ></div>
+                                                    <ul className="mb-5 grid grid-cols-3">
+                                                        <li className="mx-auto">
+                                                            <button
+                                                                type="button"
+                                                                className={`${activeTab3 === 1 ? '!border-primary !bg-primary text-white' : ''}
+                                                                bg-white dark:bg-[#253b5c] border-[3px] border-[#f3f2ee] dark:border-[#1b2e4b] flex justify-center items-center w-16 h-16 rounded-full`}
+                                                                onClick={() => setActiveTab3(1)}
+                                                            >
+                                                                <span className="text-lg font-semibold">1</span>
+                                                                {/* <IconHome /> */}
+                                                            </button>
+                                                        </li>
+                                                        <li className="mx-auto">
+                                                            <button
+                                                                type="button"
+                                                                className={`${activeTab3 === 2 ? '!border-primary !bg-primary text-white' : ''}
+                                                                bg-white dark:bg-[#253b5c] border-[3px] border-[#f3f2ee] dark:border-[#1b2e4b] flex justify-center items-center w-16 h-16 rounded-full`}
+                                                                onClick={() => setActiveTab3(2)}
+                                                            >
+                                                                <span className="text-lg font-semibold">2</span>
+                                                                {/* <IconUser className="w-5 h-5" /> */}
+                                                            </button>
+                                                        </li>
+                                                        <li className="mx-auto">
+                                                            <button
+                                                                type="button"
+                                                                className={`${activeTab3 === 3 ? '!border-primary !bg-primary text-white' : ''}
+                                                                bg-white dark:bg-[#253b5c] border-[3px] border-[#f3f2ee] dark:border-[#1b2e4b] flex justify-center items-center w-16 h-16 rounded-full`}
+                                                                onClick={() => setActiveTab3(3)}
+                                                            >
+                                                                <span className="text-lg font-semibold">3</span>
+                                                            </button>
+                                                        </li>
+                                                    </ul>
+                                                </div>
+                                                <div>
+                                                    <div>
+                                                        <label className="flex items-center cursor-pointer">
+                                                            <span className="text-white-dark">Or toggle this other custom radio</span>
+                                                            <input type="radio" name="custom_radio2" className="form-radio" />
+                                                        </label>
+                                                    </div>
+                                                    <p className="mb-5">{activeTab3 === 1 && ' Try the keyboard navigation by clicking arrow left or right!'}</p>
 
-                                            <p className="mb-5">{activeTab3 === 2 && 'The next and previous buttons help you to navigate through your content.'}</p>
+                                                    <p className="mb-5">{activeTab3 === 2 && 'The next and previous buttons help you to navigate through your content.'}</p>
 
-                                            <p className="mb-5">{activeTab3 === 3 && 'Wonderful transition effects.'}</p>
+                                                    <p className="mb-5">{activeTab3 === 3 && 'Wonderful transition effects.'}</p>
+                                                </div>
+                                                <div className="flex justify-between">
+                                                    <button type="button" className={`btn btn-primary ${activeTab3 === 1 ? 'hidden' : ''}`} onClick={() => setActiveTab3(activeTab3 === 3 ? 2 : 1)}>
+                                                        Back
+                                                    </button>
+                                                    <button type="button" className="btn btn-primary ltr:ml-auto rtl:mr-auto" onClick={() => setActiveTab3(activeTab3 === 1 ? 2 : 3)}>
+                                                        {activeTab3 === 3 ? 'Finish' : 'Next'}
+                                                    </button>
+                                                </div>
+                                            </div>
                                         </div>
-                                        <div className="flex justify-between">
-                                            <button type="button" className={`btn btn-primary ${activeTab3 === 1 ? 'hidden' : ''}`} onClick={() => setActiveTab3(activeTab3 === 3 ? 2 : 1)}>
-                                                Back
-                                            </button>
-                                            <button type="button" className="btn btn-primary ltr:ml-auto rtl:mr-auto" onClick={() => setActiveTab3(activeTab3 === 1 ? 2 : 3)}>
-                                                {activeTab3 === 3 ? 'Finish' : 'Next'}
-                                            </button>
-                                        </div>
-                                    </div>
+                                    </form>
                                 </Tab.Panel>
+                                {/* General ESG practices */}
                                 <Tab.Panel>
                                     <div>
                                         <div className="flex items-start pt-5">
