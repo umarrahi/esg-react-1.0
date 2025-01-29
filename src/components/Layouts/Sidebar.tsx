@@ -122,6 +122,7 @@ const Sidebar = () => {
                                 </AnimateHeight>
                             </li>
 
+                            {/* == Apps == */}
                             <h2 className="py-3 px-7 flex items-center uppercase font-extrabold bg-white-light/30 dark:bg-dark dark:bg-opacity-[0.08] -mx-4 mb-1">
                                 <IconMinus className="w-4 h-5 flex-none hidden" />
                                 <span>{t('apps')}</span>
@@ -219,6 +220,7 @@ const Sidebar = () => {
                                 </ul>
                             </li>
 
+                            {/* == User Interface == */}
                             <h2 className="py-3 px-7 flex items-center uppercase font-extrabold bg-white-light/30 dark:bg-dark dark:bg-opacity-[0.08] -mx-4 mb-1">
                                 <IconMinus className="w-4 h-5 flex-none hidden" />
                                 <span>{t('user_interface')}</span>
@@ -392,6 +394,7 @@ const Sidebar = () => {
                                 </NavLink>
                             </li>
 
+                            {/* == Tables And Forms == */}
                             <h2 className="py-3 px-7 flex items-center uppercase font-extrabold bg-white-light/30 dark:bg-dark dark:bg-opacity-[0.08] -mx-4 mb-1">
                                 <IconMinus className="w-4 h-5 flex-none hidden" />
                                 <span>{t('tables_and_forms')}</span>
@@ -520,6 +523,7 @@ const Sidebar = () => {
                                 </AnimateHeight>
                             </li>
 
+                            {/* == User and Pages == */}
                             <h2 className="py-3 px-7 flex items-center uppercase font-extrabold bg-white-light/30 dark:bg-dark dark:bg-opacity-[0.08] -mx-4 mb-1">
                                 <IconMinus className="w-4 h-5 flex-none hidden" />
                                 <span>{t('user_and_pages')}</span>
@@ -690,6 +694,7 @@ const Sidebar = () => {
                                 </AnimateHeight>
                             </li>
 
+                            {/* == Supports == */}
                             <h2 className="py-3 px-7 flex items-center uppercase font-extrabold bg-white-light/30 dark:bg-dark dark:bg-opacity-[0.08] -mx-4 mb-1">
                                 <IconMinus className="w-4 h-5 flex-none hidden" />
                                 <span>{t('supports')}</span>
